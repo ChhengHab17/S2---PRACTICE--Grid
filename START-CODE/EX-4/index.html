@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+          const ctx = document.getElementById('activityChart').getContext('2d');
+          const activityChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+              datasets: [{
+                label: 'Activity',
+                data: [30, 20, 50, 35, 25, 45],
+                fill: true,
+                backgroundColor: 'rgba(93, 151, 255, 0.3)',
+                borderColor: 'rgba(93, 151, 255, 0.8)',
+                borderWidth: 2,
+                tension: 0.4 // Makes the line smooth
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  display: false
+                }
+              },
+              scales: {
+                x: {
+                  grid: {
+                    display: false
+                  }
+                },
+                y: {
+                    min: 0,
+                    max: 50,
+                    ticks: {
+                    stepSize: 25
+                },
+                  grid: {
+                    display: true
+                  }
+                }
+              }
+            }
+          });
+        };
+      </script>
+    <nav>
+        <div class="container-left">
+            <img src="Asset/tutorial.png" alt="logo" width="50px">
+            <div class="option">
+                <ul>
+                    <li>Academic</li>
+                    <li>Skill Development</li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-right">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="profile">
+                <div class="img-con">
+                    <img class="me" src="Asset/me.jpg" alt="">
+                </div>
+                <h5>Hi Hab!</h5>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="container-side">
+            <div class="manu">
+                <h4>Manu</h4>
+                <div class="Courses">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Courses</p>
+                </div>
+                <div class="inbox">
+                    <i class="fa-solid fa-inbox"></i>
+                    <p>Inbox</p>
+                </div>
+                <div class="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </div>
+                <div class="sharing">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <p>Sharing</p>
+                </div>
+                <div class="Achievements">
+                    <i class="fa-regular fa-star"></i>
+                    <p>Achivements</p>
+                </div>
+            </div>
+            <div class="favorite-list">
+                <ul>
+                    <li>IOS app design</li>
+                    <li>Ux research</li>
+                    <li>Design principle</li>
+                </ul>
+            </div>
+            <div class="May-like">
+                <button>User Experience</button>
+                <button>UI design</button>
+                <button>Web design</button>
+                <button>Mobile app design</button>
+                <button>Mobile Development</button>
+            </div>
+        </div>
+        <div class="container-content">
+            <div class="head">
+                <div class="head-left">
+                    <h1>Welcome Hab</h1>
+                    <p>Education is the passport to the future!!</p>
+                    <button>Browse Courses</button>
+                </div>
+                <div class="head-right">
+                    <img src="Asset/ruler.png" alt="ruler">
+                    <img src="Asset/books.png" alt="Book">
+                </div>
+            </div>
+            <div class="txt">
+                <h3>Running Courses</h3>
+                <button><i class="fa-solid fa-arrows-up-down"></i> Filters</button>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="tittle">
+                        <h4>UI Design</h4>
+                    </div>
+                    <div class="body">
+                        <p>UI and web design</p>
+                        <p>Courses A-Z</p>
+                    </div>
+                    <div class="footer">
+                        <div class="footer-left">
+                            <p>Author</p>
+                            <p>Mr Star</p>
+                        </div>
+                        <div class="footer-right">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="tittle a">
+                        <h4>Animation</h4>
+                    </div>
+                    <div class="body">
+                        <p>Adobe after effect</p>
+                        <p>Master class</p>
+                    </div>
+                    <div class="footer">
+                        <div class="footer-left">
+                            <p>Author</p>
+                            <p>Mr Jackson</p>
+                        </div>
+                        <div class="footer-right">
+                            <div class="progress-bar a1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="tittle b">
+                        <h4>Illustration</h4>
+                    </div>
+                    <div class="body">
+                        <p>How to shape your</p>
+                        <p>Concept</p>
+                    </div>
+                    <div class="footer">
+                        <div class="footer-left">
+                            <p>Author</p>
+                            <p>Dr Wahator</p>
+                        </div>
+                        <div class="footer-right">
+                            <div class="progress-bar b1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="tittle c">
+                        <h4>UX Design</h4>
+                    </div>
+                    <div class="body">
+                        <p>UX and web design master</p>
+                        <p>Courses A-Z</p>
+                    </div>
+                    <div class="footer">
+                        <div class="footer-left">
+                            <p>Author</p>
+                            <p>Mr Jonhson</p>
+                        </div>
+                        <div class="footer-right">
+                            <div class="progress-bar c1"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-con-left">
+                <div class="top">
+                    <h3>Activities</h3>
+                    <button>Oct(1-15)<i class="fa-regular fa-calendar"></i></button>
+                </div>
+                <div class="chart-container">
+                    <canvas id="activityChart" height="100%"></canvas>
+                </div>
+            </div>
+            <div class="footer-con-right">
+                <div class="top">
+                    <h3>Suggested Courses</h3>
+                    <button>Trending <i class="fa-solid fa-arrow-down"></i></button>
+                </div>
+                <div class="con">
+                    <div class="Course">
+                        <div class="CourseL">
+                            <img src="Asset/illustration.jpg" alt="">
+                            <div class="descri">
+                                <p style="color: gray;">Art and Illustration</p>
+                                <h3>Illustration Course masterClass</h3>
+                                <h4>Nassim</h4>
+                            </div>
+                        </div>
+                        <div class="CourseR">
+                            <p><i style="color: gold;" class="fa-solid fa-star"></i> 5.0</p>
+                            <p style="font-size: 10px;">70 rating</p>
+                        </div>
+                    </div>
+                    <div class="Course">
+                        <div class="CourseL">
+                            <img src="Asset/Typo.jpg" alt="">
+                            <div class="descri">
+                                <p style="color: gray;">Design</p>
+                                <h3>Typography Rules in Webdesign</h3>
+                                <h4>Spongebob</h4>
+                            </div>
+                        </div>
+                        <div class="CourseR">
+                            <p><i style="color: gold;" class="fa-solid fa-star"></i> 5.0</p>
+                            <p style="font-size: 10px;">300 rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+</body>
+</html>
